@@ -7,6 +7,7 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Build output
 node_modules
 dist
 dist-ssr
@@ -22,3 +23,21 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Electron build artifacts
+out
+build
+release
+app/dist
+app/build
+electron-out
+electron-build
+
+# Packaging output
+*.asar
+*.exe
+*.dmg
+*.deb
+*.AppImage
+*.snap
+*.msi
