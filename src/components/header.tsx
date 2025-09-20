@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 /**
  * タブナビゲーションコンポーネント
@@ -9,26 +9,26 @@ import React from 'react';
 // value: タブの識別子（一意である必要がある）
 // label: タブに表示されるテキスト
 const tabs = [
-  { value: 'tab1', label: 'tab1' },
-  { value: 'tab2', label: 'tab2' },
-  { value: 'tab3', label: 'tab3' },
-  { value: 'tab4', label: 'tab4' },
-  { value: 'tab5', label: 'tab5' },
-  { value: 'tab6', label: 'tab6' },
-  { value: 'tab7', label: 'tab7' },
-  { value: 'tab8', label: 'tab8' },
-  { value: 'tab9', label: 'tab9' },
-  { value: 'tab10', label: 'tab10' },
-  { value: 'tab11', label: 'tab11' },
-  { value: 'tab12', label: 'tab12' },
-  { value: 'tab13', label: 'tab13' },
-  { value: 'tab14', label: 'tab14' },
-  { value: 'tab15', label: 'tab15' },
-  { value: 'tab16', label: 'tab16' },
-  { value: 'tab17', label: 'tab17' },
-  { value: 'tab18', label: 'tab18' },
-  { value: 'tab19', label: 'tab19' },
-  { value: 'tab20', label: 'tab20' },
+  { value: "tab1", label: "tab1" },
+  { value: "tab2", label: "tab2" },
+  { value: "tab3", label: "tab3" },
+  { value: "tab4", label: "tab4" },
+  { value: "tab5", label: "tab5" },
+  { value: "tab6", label: "tab6" },
+  { value: "tab7", label: "tab7" },
+  { value: "tab8", label: "tab8" },
+  { value: "tab9", label: "tab9" },
+  { value: "tab10", label: "tab10" },
+  { value: "tab11", label: "tab11" },
+  { value: "tab12", label: "tab12" },
+  { value: "tab13", label: "tab13" },
+  { value: "tab14", label: "tab14" },
+  { value: "tab15", label: "tab15" },
+  { value: "tab16", label: "tab16" },
+  { value: "tab17", label: "tab17" },
+  { value: "tab18", label: "tab18" },
+  { value: "tab19", label: "tab19" },
+  { value: "tab20", label: "tab20" },
 ];
 
 // コンポーネントのProps（プロパティ）の型定義
@@ -69,7 +69,7 @@ function Header({ activeTab, onTabChange }: HeaderProps) {
       const containerRight = containerRect.right;
 
       // 各タブボタンの位置をチェック
-      const buttons = container.querySelectorAll('button');
+      const buttons = container.querySelectorAll("button");
       let lastVisibleIndex = -1;
 
       buttons.forEach((button, index) => {
@@ -95,8 +95,8 @@ function Header({ activeTab, onTabChange }: HeaderProps) {
   // コンポーネントマウント時とリサイズ時にスクロール状態をチェック
   React.useEffect(() => {
     checkScrollState();
-    window.addEventListener('resize', checkScrollState);
-    return () => window.removeEventListener('resize', checkScrollState);
+    window.addEventListener("resize", checkScrollState);
+    return () => window.removeEventListener("resize", checkScrollState);
   }, [checkScrollState]);
 
   return (
@@ -115,8 +115,8 @@ function Header({ activeTab, onTabChange }: HeaderProps) {
           className="flex overflow-x-auto scrollbar-hide px-4"
           style={
             {
-              scrollbarWidth: 'none', // Firefox用のスクロールバー非表示
-              msOverflowStyle: 'none', // IE/Edge用のスクロールバー非表示
+              scrollbarWidth: "none", // Firefox用のスクロールバー非表示
+              msOverflowStyle: "none", // IE/Edge用のスクロールバー非表示
             } as React.CSSProperties
           }
           // マウスホイールイベントハンドラー
@@ -144,10 +144,10 @@ function Header({ activeTab, onTabChange }: HeaderProps) {
                             px-4 py-2 border-b-2 whitespace-nowrap flex-shrink-0
                             ${
                               activeTab === tab.value
-                                ? 'border-orange-500 text-gray-200 font-bold' // アクティブタブのスタイル
+                                ? "border-orange-500 text-gray-200 font-bold" // アクティブタブのスタイル
                                 : shouldDimVisibleLastTab
-                                  ? 'border-black text-gray-500' // 表示されている最後の要素を暗くする（スクロール可能で右端にいない場合）
-                                  : 'border-black text-gray-200' // 通常の非アクティブタブのスタイル
+                                  ? "border-black text-gray-500" // 表示されている最後の要素を暗くする（スクロール可能で右端にいない場合）
+                                  : "border-black text-gray-200" // 通常の非アクティブタブのスタイル
                             }
                         `}
                 // Tailwind CSSクラスの説明:
