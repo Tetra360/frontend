@@ -1,34 +1,23 @@
+import { Tab, type TabData } from "@/components/ui/ChildTabs";
+import { useState } from "react";
+
 /**
  * Tab2コンポーネント
  * 2番目のタブの専用画面を表示
  */
 function Tab2() {
+  const [activeTab, setActiveTab] = useState("subtab1");
+
+  // Tab2内で使用する3つのサブタブ
+  const tabs: TabData[] = [
+    { value: "subtab1", label: "Sub Tab 1" },
+    { value: "subtab2", label: "Sub Tab 2" },
+    { value: "subtab3", label: "Sub Tab 3" },
+  ];
+
   return (
-    <div className="max-w-5xl mx-auto p-8 text-center">
-      <h1 className="text-5xl font-bold mb-8 text-orange-500">Tab 2 Content</h1>
-
-      <div className="p-8 bg-card rounded-lg border">
-        <h2 className="text-2xl font-semibold mb-4">Welcome to Tab 2!</h2>
-        <p className="text-muted-foreground mb-6">
-          This is the content for the second tab. You can add any components or
-          features here.
-        </p>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="p-4 bg-muted rounded-lg">
-            <h3 className="font-semibold mb-2">Feature 1</h3>
-            <p className="text-sm text-muted-foreground">
-              Add your first feature description here.
-            </p>
-          </div>
-          <div className="p-4 bg-muted rounded-lg">
-            <h3 className="font-semibold mb-2">Feature 2</h3>
-            <p className="text-sm text-muted-foreground">
-              Add your second feature description here.
-            </p>
-          </div>
-        </div>
-      </div>
+    <div className="p-12">
+      <Tab tabs={tabs} activeTab={activeTab} onTabChange={setActiveTab} />
     </div>
   );
 }

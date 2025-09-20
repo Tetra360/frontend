@@ -1,4 +1,4 @@
-import { Tab } from "@/components/ui/tab";
+import { Tab } from "@/components/ui/ParentTabs";
 import reactLogo from "@/assets/react.svg";
 
 /**

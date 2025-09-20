@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { Header } from "@/components/header/header";
-import { Tab1 } from "@/components/body/tab1";
-import { Tab2 } from "@/components/body/tab2";
-import { TabNotFound } from "@/components/body/tab-not-found";
+import { Header } from "@/components/header/Header";
+import { Tab1 } from "@/components/body/Tab1";
+import { Tab2 } from "@/components/body/Tab2";
+import { TabNotFound } from "@/components/body/TabNotFound";
 
 function App() {
   const [activeTab, setActiveTab] = useState("tab1");
