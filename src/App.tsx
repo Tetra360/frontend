@@ -1,8 +1,8 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/electron-vite.animate.svg';
-import { Button } from '@/components/ui/button';
-import { Header } from '@/components/header';
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/electron-vite.animate.svg";
+import { Button } from "@/components/ui/button";
+import { Header } from "@/components/header";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -27,7 +27,7 @@ function App() {
             <img
               src={reactLogo}
               className="h-24 p-6 transition-all duration-300 hover:drop-shadow-lg hover:drop-shadow-cyan-400/50 animate-spin"
-              style={{ animationDuration: '20s' }}
+              style={{ animationDuration: "20s" }}
               alt="React logo"
             />
           </a>
@@ -40,10 +40,10 @@ function App() {
             count is {count}
           </Button>
           <p className="text-muted-foreground">
-            Edit{' '}
+            Edit{" "}
             <code className="bg-muted px-2 py-1 rounded text-sm">
               src/App.tsx
-            </code>{' '}
+            </code>{" "}
             and save to test HMR
           </p>
         </div>
