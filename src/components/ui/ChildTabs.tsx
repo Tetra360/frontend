@@ -25,7 +25,7 @@ function Tab({ tabs, activeTab, onTabChange }: TabProps) {
       {/* scrollbar-hide: スクロールバーを非表示にするカスタムクラス */}
       <div
         ref={scrollContainerRef}
-        className="flex overflow-x-auto scrollbar-hide px-4"
+        className="flex overflow-x-auto scrollbar-hide"
         style={
           {
             scrollbarWidth: "none", // Firefox用のスクロールバー非表示
@@ -39,7 +39,8 @@ function Tab({ tabs, activeTab, onTabChange }: TabProps) {
           e.currentTarget.scrollLeft += e.deltaY; // 縦スクロール量を横スクロールに変換
         }}
       >
-        <div className="border-b border-gray-400 flex-grow-1"></div>
+        {/* タブの左側の残りスペースを埋める下線要素 */}
+        <div className="border-b border-gray-400 flex-grow px-2"></div>
         {/* タブ配列をmapでループしてボタンを生成 */}
         {tabs.map(tab => (
           <button
@@ -59,7 +60,7 @@ function Tab({ tabs, activeTab, onTabChange }: TabProps) {
           </button>
         ))}
         {/* タブの右側の残りスペースを埋める下線要素 */}
-        <div className="border-b border-gray-400 flex-grow-9"></div>
+        <div className="border-b border-gray-400 flex-grow-9 px-2"></div>
       </div>
     </div>
   );
